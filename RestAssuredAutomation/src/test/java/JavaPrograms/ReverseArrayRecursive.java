@@ -1,5 +1,7 @@
 package JavaPrograms;
 
+import java.util.Arrays;
+
 public class ReverseArrayRecursive {
 	//using Normal method
 	public static void reverseArrayNormal(int a[]) {
@@ -25,7 +27,7 @@ public class ReverseArrayRecursive {
 		}
 		int temp=a[start];//temp=1
 		a[start]=a[end];//start=3
-		a[end]=a[temp];//end=1
+		a[end]=temp;//end=1
 		//recursively reverse the subarray
 		reverseRecursive(a, start+1, end-1);
 		//System.out.println();
@@ -36,6 +38,7 @@ public class ReverseArrayRecursive {
 		reverseRecursive(a, 0, a.length-1);
 		for (int i : a) {
 			System.out.print(" "+i);
+			System.out.print(" "+Arrays.toString(a));
 		}
 	}
 

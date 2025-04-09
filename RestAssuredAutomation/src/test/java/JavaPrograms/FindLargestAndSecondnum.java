@@ -11,7 +11,9 @@ public class FindLargestAndSecondnum {
         {
             if(nums>large)
             {
+            	small=large;
                 large=nums;
+                
             }
             if(nums>small&& nums!=large)
             {

@@ -38,6 +38,6 @@ public class FindDulpicates {
         	  System.out.println(map.get(count)+" : "+count );
           }
 	      
-	    System.out.println(map);
+	    //System.out.println(map);
 	    }
 }
