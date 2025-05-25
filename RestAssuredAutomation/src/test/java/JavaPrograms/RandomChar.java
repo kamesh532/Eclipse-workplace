@@ -5,7 +5,7 @@ import java.util.Random;
 public class RandomChar {
 public static void randomChar(int len)
 {
-	String str="[^a-zA-Z]";
+	String str= "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 StringBuilder sb= new StringBuilder();
 Random rd= new  Random();
 

@@ -1,6 +1,8 @@
 package JavaPrograms;
 
-import org.apache.commons.collections4.bag.SynchronizedSortedBag;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 public class CheckVowelsInStr {
 	static int c=0;
@@ -18,12 +20,49 @@ public static void  findVowels(String str) {
 	}
 	}
 }
+	//2nd Approach using set
+	public static void usingSet(String str)
+	{
+		Set<Character> vowelsSet=new HashSet<>(Arrays.asList('a','e','i','o','u'));
+	       StringBuilder vowels=new StringBuilder();
+	       
+	       for(char ch: str.toLowerCase().toCharArray())
+	       {
+	           if(vowelsSet.contains(ch))
+	           {
+	               vowels.append(ch);
+	               c++;
+	           }
+	       }
+	        System.out.println("2nd Approach: "+vowels.toString()+" "+c);
+	}
+	
+	//3rd Approach
+	public static void countVowelsAndCons(String str)
+	{
+		int v=0,c=0;
+        
+      
+        for(char ch:str.toCharArray())
+        {
+            if(Character.isLetter(ch))
+            {
+                if("aeiou".indexOf(ch)!=-1)v++;
+                else c++;
+            }
+        }
+        System.out.println("3rd Approach: vowels: "+v+"  conso: "+c);
+	}
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//System.out.println(vowelcheck("My Name is Kamesh"));
 
-String str="My Name is Kamesh";
-findVowels(str);
+String str="/Ka@mesh$123/";
+//findVowels(str);
+usingSet(str);
+countVowelsAndCons(str);
+
 	}
 
 }

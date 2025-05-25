@@ -7,7 +7,7 @@ public class ReverseFirstThree {
 	      int len=str.length();
 	      String sub=new StringBuilder(str.substring(0,len/2)).reverse().toString();
 	      
-	      String remainstr=str.substring(3);
-	      System.out.println(sub+remainstr);
+	      String remainstr=str.substring(len/2);
+	      System.out.println(sub);
 	    }
 	}

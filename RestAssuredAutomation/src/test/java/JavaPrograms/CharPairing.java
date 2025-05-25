@@ -9,8 +9,9 @@ public class CharPairing {
 	      for(int i=0; i<str.length(); i++)
 	          {
 	              for(int j=0; j<str.length(); j++){
-	                  if(i!=j&& str.charAt(j)!=' '){
-	                     System.out.print(str.charAt(i)+ "" + str.charAt(j) + ", ") ;
+	                  if(str.charAt(i)!=str.charAt(j) && str.charAt(j)!=' '){
+	                	 String ch=str.charAt(i)+ "" + str.charAt(j);
+	                     System.out.print( ch+ ", ") ;
 	                  }
 	              }
 	          }
